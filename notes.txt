@@ -1,2 +1,5 @@
 we plotted life exp over time 
 
+each point reprsents a country 
+continents are grouped by color 
+
