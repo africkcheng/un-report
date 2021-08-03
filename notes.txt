@@ -2,4 +2,11 @@ we plotted life exp over time
 
 each point reprsents a country 
 continents are grouped by color 
+<<<<<<< HEAD
 i am changing a thing 
+=======
+
+dependcies: 
+-R >=4.0
+-tidyverse
+>>>>>>> 308c760aa76489a6adfb86cecb47d65e7f7a1af0
