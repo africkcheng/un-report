@@ -172,15 +172,8 @@ pre code {
 
 
 <p>library(tidyverse)</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
-<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
-## v tibble  3.1.3     v dplyr   1.0.7
-## v tidyr   1.1.3     v stringr 1.4.0
-## v readr   2.0.0     v forcats 0.5.1</code></pre>
-<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
 <p>This report was prepared to the attention of the United Nations. It analyzes the relationship between a country’s GDP, its life expectancy and CO2 emissions. Our goal is to determine to what degree a country’s economic strength or weakness may be related to its public health status and impact on climate pollution. We hypothesize that both life expectancy and CO2 emissions increase with a country’s GDP.</p>
 <pre class="r"><code>gapminder_1997 &lt;-  read_csv(&quot;../data/gapminder_1997.csv&quot;)</code></pre>
 <pre><code>## Rows: 142 Columns: 5</code></pre>
@@ -191,6 +184,9 @@ pre code {
 <pre><code>## 
 ## i Use `spec()` to retrieve the full column specification for this data.
 ## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
 <pre class="r"><code>#echo = true shows the code
 #echo = false shows just the output (graph)
 #include= TRUE it will show the code AND the output (default)
@@ -259,6 +255,18 @@ ggplot(data = gapminder_1997) +
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>R</strong></li>
+<li><em>ggplot</em></li>
+<li><strong><em>How to analyze RNAseq data</em></strong></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><strong>R</strong></li>
+<li><em>ggplot</em></li>
+<li><strong><em>How to analyze RNAseq data</em></strong></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">cheatsheet for markdown</a></li>
+</ol>
+</div>
 
 
 

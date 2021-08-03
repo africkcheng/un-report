@@ -11,9 +11,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ``` 
 
-```{r load_package}
+```{r load_package, include=FALSE}
 library(tidyverse)
 ```
+
+# Introduction
+
 This report was prepared to the attention of the United Nations. It analyzes the relationship between a country's GDP, its life expectancy and CO2 emissions. Our goal is to determine to what degree a country’s economic strength or weakness may be related to its public health status and impact on climate pollution. We hypothesize that both life expectancy and CO2 emissions increase with a country's GDP.
 
 ```{r load_data}
@@ -21,7 +24,7 @@ This report was prepared to the attention of the United Nations. It analyzes the
 gapminder_1997 <-  read_csv("../data/gapminder_1997.csv")
 
 ```
-
+# Results
 ```{r plot_gdp_life_exp, echo=TRUE}
 
 #echo = true shows the code
@@ -64,10 +67,17 @@ below this will insert a table into the report (https://www.tablesgenerator.com/
 ````{r make_table_with_kable, echo=FALSE}
 gapminder_1997 %>%
   filter(continent=="Oceania") %>%
-  #specifically pulls the package knitr (not loaded, just refereing this speicifc function)
+  #specifically pulls the package knitr (not loaded, just referring this specific function)
   #kable makes a table
   knitr::kable()
 ```
 
+* __R__
+* _ggplot_ 
+* ___How to analyze RNAseq data___
 
+1. __R__
+2. _ggplot_
+3. ___How to analyze RNAseq data___
+4. [cheatsheet for markdown](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) 
 
