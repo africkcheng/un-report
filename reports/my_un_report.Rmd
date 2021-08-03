@@ -11,7 +11,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ``` 
 
-```{r load_packages}
+```{r load_package}
 library(tidyverse)
 ```
 This report was prepared to the attention of the United Nations. It analyzes the relationship between a country's GDP, its life expectancy and CO2 emissions. Our goal is to determine to what degree a country’s economic strength or weakness may be related to its public health status and impact on climate pollution. We hypothesize that both life expectancy and CO2 emissions increase with a country's GDP.
@@ -22,7 +22,11 @@ gapminder_1997 <-  read_csv("../data/gapminder_1997.csv")
 
 ```
 
-```{r plot_gdp_life_exp}
+```{r plot_gdp_life_exp, echo=TRUE}
+
+#echo = true shows the code
+#echo = false shows just the output (graph)
+#include= TRUE it will show the code AND the output (default)
 
 ggplot(data = gapminder_1997) +
   aes(x = gdpPercap, y = lifeExp, 
@@ -33,5 +37,37 @@ ggplot(data = gapminder_1997) +
   geom_point()+
   scale_color_brewer(palette = "Set1")
 ```
+
+```{r calculate_summary_statistics, include=FALSE}
+ncountries <- gapminder_1997 %>%
+  select(country) %>%
+  n_distinct()
+
+minGDP <- gapminder_1997 %>%
+  summarise(round(min(gdpPercap)))
+
+maxGDP <- gapminder_1997 %>%
+  summarise(round(max(gdpPercap)))
+
+```
+for this analysis `r ncountries` countries were analyzied for this report. The minimum GDP per capita was `r minGDP`, The minimum GDP per capita was `r maxGDP`, (it will insert in the answers from those variables of the previous code chunk)
+
+below this will insert a table into the report (https://www.tablesgenerator.com/markdown_tables)
+
+| indicator | value   |
+| --- | --- |
+| minGDP | `r minGDP` |
+| MaxGDP | `r maxGDP` |
+|   |   |
+|   |   |
+
+````{r make_table_with_kable, echo=FALSE}
+gapminder_1997 %>%
+  filter(continent=="Oceania") %>%
+  #specifically pulls the package knitr (not loaded, just refereing this speicifc function)
+  #kable makes a table
+  knitr::kable()
+```
+
 
 
